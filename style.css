@@ -532,7 +532,10 @@ header .nav-list li a:hover {
     }
 }
 
+.about {
 
+    background-color:"white"
+}
 
 @media (max-width: 480px) {
     header nav ul {
