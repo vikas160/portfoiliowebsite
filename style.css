@@ -348,6 +348,83 @@ form button:hover {
         padding: 8px 16px;
     }
 }
+/* Header Styling */
+header {
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header .menu-toggle {
+    display: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+header .nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header .nav-list li {
+    margin: 0 15px;
+}
+
+header .nav-list li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header .nav-list li a:hover {
+    color: #ff4757; /* Change color on hover */
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        background: rgba(0, 0, 0, 0.9); /* Dark background for dropdown */
+        padding: 10px 0;
+    }
+
+    header .nav-list.active {
+        display: flex;
+    }
+
+    header .nav-list li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    header .menu-toggle {
+        display: block;
+    }
+}
 
 @media (max-width: 480px) {
     header nav ul {
