@@ -534,7 +534,7 @@ header .nav-list li a:hover {
 
 .about {
 
-    background-color:"white"
+    background-color: #4682b4;
 }
 
 @media (max-width: 480px) {
