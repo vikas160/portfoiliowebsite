@@ -533,12 +533,6 @@ header .nav-list li a:hover {
 }
 
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .video-container {
-        padding-top: 56.25%; /* Adjust if using a different aspect ratio */
-    }
-}
 
 @media (max-width: 480px) {
     header nav ul {
