@@ -425,6 +425,112 @@ header .nav-list li a:hover {
         display: block;
     }
 }
+/* Header Styling */
+header {
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header .menu-toggle {
+    display: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+header .menu-toggle:hover {
+    color: #ff4757; /* Change color on hover */
+}
+
+header .nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+header .nav-list li {
+    margin: 0 15px;
+}
+
+header .nav-list li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header .nav-list li a:hover {
+    color: #ff4757; /* Change color on hover */
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+    header .nav-list {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        background: rgba(0, 0, 0, 0.9); /* Dark background for dropdown */
+        padding: 10px 0;
+        opacity: 0;
+        transform: translateY(-20px);
+        visibility: hidden;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    header .nav-list.active {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+    }
+
+    header .nav-list li {
+        margin: 10px 0;
+        text-align: center;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    header .nav-list li:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+    header .nav-list li:nth-child(2) {
+        transition-delay: 0.2s;
+    }
+    header .nav-list li:nth-child(3) {
+        transition-delay: 0.3s;
+    }
+    header .nav-list li:nth-child(4) {
+        transition-delay: 0.4s;
+    }
+    header .nav-list li:nth-child(5) {
+        transition-delay: 0.5s;
+    }
+
+    header .menu-toggle {
+        display: block;
+    }
+}
 
 @media (max-width: 480px) {
     header nav ul {
